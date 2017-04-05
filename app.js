@@ -8,9 +8,9 @@ import path from 'path';
 import { middleware as stylusMiddleware } from 'stylus';
 import index from './routes/index';
 import mongoose from 'mongoose';
+import es6 from 'es6-promise';
 
-mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/test');
+mongoose.Promise = es6.Promise;
 
 const app = express();
 const debug = Debug('cadmus:app');

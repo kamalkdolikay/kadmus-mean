@@ -7,6 +7,11 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
             templateUrl: '/home.html',
             controller: 'main'
         })
+        .state('home1', {
+            url: '/homee',
+            templateUrl: '/home.html',
+            controller: 'main'
+        })
 
     $urlRouterProvider.otherwise('home')
 

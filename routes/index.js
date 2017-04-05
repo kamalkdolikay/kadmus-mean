@@ -1,7 +1,5 @@
 import express from 'express';
 import User from '../models/User.js';
-import jwt from 'express-jwt';
-const auth = jwt({ secret: 'SECRET', userProperty: payload });
 
 const router = express.Router();
 
@@ -10,6 +8,10 @@ router.get('/', (req, res, next) => {
     res.render('index', {
         title: 'Express'
     });
+});
+
+router.all('*', function(req, res, next) {
+    res.render('index');
 });
 
 router.get('/posts', (req, res) => {
