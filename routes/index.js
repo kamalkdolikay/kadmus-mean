@@ -10,18 +10,18 @@ router.get('/', (req, res, next) => {
     });
 });
 
-router.all('*', function(req, res, next) {
+router.all('/home', function(req, res, next) {
     res.render('index');
 });
+
+router.get('/dashboard/*', (req, res) => {
+    res.render('dashboard')
+})
 
 router.get('/posts', (req, res) => {
     User.find({}, function(err, docs) {
         res.send(docs)
     })
-})
-
-router.get('/dashboard', (req, res) => {
-    res.render('dashboard')
-})
+});
 
 export default router;

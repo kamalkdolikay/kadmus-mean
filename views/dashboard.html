@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <base href="/dashboard" />
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
@@ -10,8 +11,7 @@
 
 <body ng-app="dashboard">
     <div ng-controller="main">
-        <h2>{{user}} kamal</h2>
-        <button ng-click="abc()">ABC</button>
+        <h1>{{user}}</h1>
         <ui-view></ui-view>
     </div>
 </body>

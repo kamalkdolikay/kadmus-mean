@@ -1,22 +1,20 @@
-var app = angular.module('dashboard', ['ui.router']);
+angular
+    .module('dashboard', ['ui.router'])
+    .controller('main', main)
+    .config(config)
 
-app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
+function config($stateProvider, $urlRouterProvider, $locationProvider) {
     $stateProvider
         .state('home', {
-            url: '/dasboard/home',
-            templateUrl: '/home.html',
+            url: '/dashboard/user',
+            templateUrl: 'home.html',
             controller: 'main'
         })
 
     $urlRouterProvider.otherwise('home')
-    $locationProvider.html5mode(true)
+    $locationProvider.html5Mode(true)
+}
 
-})
-
-app.controller('main', function($scope, $http) {
+function main($scope, $http) {
     $scope.user = "hello";
-    $scope.abc = function() {
-        $http.get('/posts')
-    }
-
-})
+}
