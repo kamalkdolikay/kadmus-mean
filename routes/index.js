@@ -1,5 +1,6 @@
 import express from 'express';
 import User from '../models/User.js';
+import cool from 'cool-ascii-faces';
 
 const router = express.Router();
 
@@ -22,6 +23,10 @@ router.get('/posts', (req, res) => {
     User.find({}, function(err, docs) {
         res.send(docs)
     })
+});
+
+router.get('/cool', function(req, res) {
+    res.send(cool());
 });
 
 export default router;

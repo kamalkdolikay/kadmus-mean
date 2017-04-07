@@ -9,6 +9,7 @@ import { middleware as stylusMiddleware } from 'stylus';
 import index from './routes/index';
 import mongoose from 'mongoose';
 import es6 from 'es6-promise';
+import cool from 'cool-ascii-faces';
 
 mongoose.Promise = es6.Promise;
 
