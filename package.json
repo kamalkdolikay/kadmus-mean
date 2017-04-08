@@ -4,7 +4,7 @@
   "private": true,
   "main": "app.js",
   "scripts": {
-    "start": "node ./bin/start",
+    "start": "nodemon ./bin/start",
     "test": "mocha --recursive './test/*Test.js' --compilers js:babel-core/register"
   },
   "dependencies": {
@@ -23,6 +23,7 @@
     "jsonwebtoken": "^7.3.0",
     "mongoose": "^4.9.3",
     "morgan": "~1.7.0",
+    "nodemon": "^1.11.0",
     "serve-favicon": "~2.3.2",
     "stylus": "^0.54.5",
     "webpack": "^2.3.3",

@@ -1,1 +1,1 @@
-web: node ./bin/start
+web: nodemon ./bin/start
