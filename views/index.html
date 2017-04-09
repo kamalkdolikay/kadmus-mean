@@ -12,6 +12,19 @@
 <body ng-app="user">
     <div ng-controller="main">
         <h2>{{user}} kamal</h2>
+        <form ng-submit="add()">
+            <h3>login passport</h3>
+            <input type="text" ng-model="form.username">
+            <input type="text" ng-model="form.password">
+            <input type="submit">{{error.data.message}}
+        </form>
+        <a href="" ng-click="logOut()">Log Out</a>
+        <form ng-submit="addjwt()">
+            <h3>login passport-jwt</h3>
+            <input type="text" ng-model="form.username">
+            <input type="text" ng-model="form.password">
+            <input type="submit">{{error.data.message}}
+        </form>
         <ui-view></ui-view>
     </div>
 </body>
